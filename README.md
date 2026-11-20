@@ -20,7 +20,22 @@ A desktop application built with Python, TensorFlow/Keras, OpenCV, and Tkinter t
 - `*.jpg / *.JPG` — Sample leaf images included for testing predictions.
 
 ## Prerequisites & Installation
-1. Clone the repository:
-   ```bash
-git clone https://github.com/kavinyakannankenneth/AI-Powered-Plant-Leaf-Disease-Detection-System.git
-   cd AI-Powered-Plant-Leaf-Disease-Detection-System
+
+1. **Clone the repository:**
+   `git clone https://github.com/kavinyakannankenneth/AI-Powered-Plant-Leaf-Disease-Detection-System.git`
+   `cd AI-Powered-Plant-Leaf-Disease-Detection-System`
+
+2. **Install the required Python libraries:**
+   `pip install tensorflow opencv-python numpy pillow matplotlib`
+
+3. **Create the required working directories in the root project folder before running:**
+   `mkdir -p Data Output/Out`
+
+## Usage
+
+Run the main application:
+`python Main.py`
+
+- **UploadImage:** Select a disease category from the dropdown and upload training leaf images into `Data/<Category>/`.
+- **Training:** Runs `model.py` to train the CNN model.
+- **Testing:** Select any leaf image (including the sample `.jpg` images in this repository) to preprocess the image, run inference with `leafmodel.h5`, and view the classification result and treatment recommendation.
